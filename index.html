@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>汉本养 · 门店经营方向诊断</title>
+  <style>
+    :root{--ink:#202923;--muted:#737e76;--line:#dfe6df;--paper:#fff;--canvas:#f5f7f4;--green:#326448;--green-dark:#244c35;--green-soft:#eaf2eb;--amber:#b77742;--amber-soft:#f8f0e8;--red:#bd6955;--shadow:0 14px 40px rgba(31,53,39,.06)}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--canvas);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.topbar{height:62px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1120px)/2));position:sticky;top:0;z-index:4}.brand{display:flex;align-items:center;gap:10px;font-weight:700}.brand-mark{width:31px;height:31px;border-radius:6px;background:var(--green);display:grid;place-items:center;color:#fff;font-family:serif;font-size:18px}.brand small{display:block;color:var(--muted);font-weight:400;font-size:10px;margin-top:-3px}.header-note{color:var(--muted);font-size:11px;display:flex;gap:8px;align-items:center}.dot{width:7px;height:7px;border-radius:50%;background:#68a27a}.wrap{max-width:1120px;margin:0 auto;padding:34px 24px 72px}.intro{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px;gap:16px}.eyebrow{color:var(--green);font-size:10px;font-weight:700;letter-spacing:1px}.intro h1{font-size:27px;line-height:1.25;margin:7px 0 7px;font-weight:650}.intro p{font-size:13px;color:var(--muted);margin:0}.private-note{font-size:11px;color:#718075;padding-bottom:4px;white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);gap:18px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:7px;box-shadow:var(--shadow)}.form{padding:22px 23px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:15px;border-bottom:1px solid #edf0ec}.panel-head h2{font-size:16px;margin:0 0 4px}.panel-head p{font-size:11px;color:var(--muted);margin:0}.time-tag{font-size:10px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;white-space:nowrap}.field{margin-top:16px}.label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:650;margin-bottom:7px}.optional{font-size:10px;font-weight:400;color:#929a93}.input,.select,.textarea{width:100%;border:1px solid #dfe4de;border-radius:5px;background:#fff;color:var(--ink);padding:10px 11px;font-size:12px;outline:none}.input:focus,.select:focus,.textarea:focus{border-color:#7c9b83;box-shadow:0 0 0 3px rgba(50,100,72,.08)}.input::placeholder,.textarea::placeholder{color:#a0a8a1}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choices{display:flex;flex-wrap:wrap;gap:7px}.choice{border:1px solid #dce3dc;background:white;color:#58635a;border-radius:4px;padding:7px 9px;font-size:11px;transition:.15s}.choice:hover{border-color:#8fa994}.choice.selected{color:var(--green);background:var(--green-soft);border-color:#a9bdad;font-weight:650}.textarea{min-height:106px;resize:vertical;line-height:1.6}.hint{font-size:10px;color:#929a93;margin-top:5px}.upload{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px dashed #cbd7cd;border-radius:5px;background:#fafcf9;cursor:pointer}.upload:hover,.upload.drag{border-color:var(--green);background:#f2f7f2}.upload-symbol{width:30px;height:30px;border-radius:5px;display:grid;place-items:center;background:#edf3ee;color:var(--green);font-size:18px}.upload-copy{flex:1;min-width:0}.upload-copy strong{display:block;font-size:11px}.upload-copy span{display:block;color:#929a93;font-size:10px}.upload-btn{padding:6px 9px;border:1px solid var(--line);border-radius:4px;background:white;color:#536056;font-size:10px}.file-list{margin-top:6px;font-size:10px;color:var(--green)}.action-row{display:flex;gap:9px;margin-top:19px}.primary{flex:1;border:0;border-radius:5px;background:var(--green);color:white;font-size:12px;font-weight:650;padding:11px 14px;display:flex;align-items:center;justify-content:center;gap:8px}.primary:hover{background:var(--green-dark)}.ghost{border:1px solid var(--line);border-radius:5px;background:white;color:#59645b;font-size:11px;padding:10px 12px}.fine{font-size:10px;color:#9aa19a;text-align:center;margin-top:8px}.result{overflow:hidden;min-height:650px}.result-top{background:#f1f6f1;border-bottom:1px solid #e2e9e1;padding:18px 20px}.result-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.result-title h2{font-size:15px;margin:0 0 3px}.result-title p{font-size:10px;color:var(--muted);margin:0}.badge{font-size:10px;color:var(--green);background:#e4efe5;border:1px solid #d2e2d4;border-radius:4px;padding:4px 7px;white-space:nowrap}.result-body{padding:19px 20px 22px}.empty{min-height:570px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#78827a}.empty-icon{width:46px;height:46px;border-radius:50%;background:#eef3ee;color:#719078;display:grid;place-items:center;font-size:20px;margin-bottom:12px}.empty strong{font-size:13px;color:#46534a}.empty p{font-size:11px;max-width:250px;line-height:1.7;margin:5px 0 0}.results{display:none}.summary{font-size:12px;color:#4e5b51;line-height:1.8;margin:0 0 15px}.assessment{border:1px solid #e4ebe4;background:#fbfcfa;border-radius:5px;padding:13px 14px}.assessment-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.assessment-head strong{font-size:11px}.assessment-head span{font-size:10px;color:var(--muted)}.bars{display:grid;gap:8px}.bar-row{display:grid;grid-template-columns:72px 1fr 55px;align-items:center;gap:8px;font-size:10px;color:#58635a}.track{height:5px;background:#e9eeea;border-radius:9px;overflow:hidden}.track i{display:block;height:100%;background:#86a18a;border-radius:9px}.bar-row b{font-size:9px;font-weight:600;text-align:right;color:#6a756c}.section{font-size:11px;font-weight:700;margin:17px 0 8px;display:flex;gap:7px;align-items:center}.section:before{content:"";width:3px;height:12px;background:var(--green);border-radius:2px}.issue-list{display:grid;gap:7px}.issue{display:flex;gap:8px;padding:9px 10px;border:1px solid #eee7df;background:#fcfaf7;border-radius:4px}.num{width:17px;height:17px;flex:none;border-radius:50%;display:grid;place-items:center;background:#f4eae0;color:#9b6846;font-size:9px}.issue strong{display:block;font-size:10px;margin-bottom:2px}.issue span{font-size:10px;color:#727c73;line-height:1.55;display:block}.direction{display:grid;gap:0}.direction-row{display:grid;grid-template-columns:54px 1fr;gap:9px;padding:9px 0;border-bottom:1px solid #edf0ec}.direction-row:last-child{border-bottom:0}.week{font-size:9px;color:var(--green);font-weight:700}.direction-row strong{font-size:10px;display:block}.direction-row span{font-size:10px;color:#737d74;display:block;margin-top:2px}.contact{margin-top:17px;padding-top:14px;border-top:1px solid var(--line)}.contact p{color:var(--muted);font-size:10px;margin:0 0 9px}.contact-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.contact-buttons button{font-size:11px;padding:10px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,12px);opacity:0;pointer-events:none;z-index:10;background:#29392f;color:white;border-radius:5px;padding:10px 14px;font-size:11px;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.spinner{width:13px;height:13px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .7s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    .empty[hidden]{display:none}.visual-tool{margin-top:17px;padding:14px;border:1px solid var(--line);border-radius:6px;background:#fbfcfa}.visual-tool strong{font-size:11px;display:block}.visual-tool p{font-size:10px;color:var(--muted);margin:3px 0 9px}.visual-prompt{width:100%;min-height:70px;padding:9px;border:1px solid var(--line);border-radius:5px;resize:vertical;font:inherit;font-size:10px}.visual-controls{display:flex;gap:8px;margin-top:8px}.visual-controls select{width:105px;padding:7px}.visual-controls button{flex:1;font-size:10px;padding:8px}.visual-status{font-size:10px;color:var(--muted);min-height:16px;margin-top:7px}.generated-image{width:100%;height:auto;border-radius:5px;margin-top:9px;border:1px solid var(--line)}.generated-image[hidden]{display:none}.image-link{display:none;font-size:10px;color:var(--green);margin-top:6px}
+    @media(max-width:780px){.topbar{height:56px;padding:0 16px}.header-note span:last-child{display:none}.wrap{padding:22px 14px 42px}.intro{align-items:flex-start;flex-direction:column;gap:9px;margin-bottom:17px}.intro h1{font-size:23px}.layout{grid-template-columns:1fr;gap:13px}.form{padding:18px 16px}.result{min-height:unset}.empty{min-height:270px}.result-body{padding:16px}.private-note{font-size:10px}}
+    @media(max-width:380px){.two{gap:8px}.choice{font-size:10px;padding:7px}.contact-buttons{grid-template-columns:1fr}.action-row{gap:7px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">本</div><div>汉本养<small>门店经营工具</small></div></div>
+    <div class="header-note"><span class="dot"></span><span>门店经营方向诊断</span></div>
+  </header>
+  <main class="wrap">
+    <div class="intro">
+      <div><div class="eyebrow">STORE DIRECTION CHECK</div><h1>你的门店，下一步往哪走？</h1><p>把门店正在经历的问题告诉我们，快速看清现状，并找到更合适的调整方向。</p></div>
+      <div class="private-note">◇　无需提交敏感经营数据</div>
+    </div>
+    <div class="layout">
+      <section class="panel form" aria-labelledby="form-title">
+        <div class="panel-head"><div><h2 id="form-title">说说你的门店情况</h2><p>选择困扰并简单描述，资料上传完全自愿</p></div><span class="time-tag">约 1 分钟</span></div>
+        <form id="store-form">
+          <div class="field"><label class="label" for="store-stage">门店目前处于什么阶段？</label><select class="select" id="store-stage"><option value="经营中">正在经营</option><option value="筹备中">筹备开店中</option><option value="调整中">准备调整 / 升级</option></select></div>
+          <div class="field"><div class="label">最近最困扰你的问题是什么？ <span class="optional">可多选</span></div><div class="choices" id="problems"><button type="button" class="choice" data-key="traffic">新客少，客流不稳定</button><button type="button" class="choice" data-key="conversion">有咨询，到店和成交少</button><button type="button" class="choice" data-key="repurchase">老客复购不理想</button><button type="button" class="choice" data-key="project">项目不好卖 / 结构不清</button><button type="button" class="choice" data-key="team">员工执行和团队管理难</button><button type="button" class="choice" data-key="profit">营业额或利润有压力</button></div></div>
+          <div class="field"><label class="label" for="situation">具体发生了什么？ <span class="optional">写几句就可以</span></label><textarea class="textarea" id="situation" maxlength="1200" placeholder="例如：店开了两年，最近到店新客变少；做过团购，但顾客体验后没有继续消费。我想知道问题更可能出在哪里。"></textarea><div class="hint"><span id="char-count">0</span>/1200　可写现象、尝试过的方法和最想改变的结果</div></div>
+          <div class="field"><div class="label">有门店资料想一起参考吗？ <span class="optional">选填</span></div><label class="upload" id="drop-zone" for="files"><span class="upload-symbol">＋</span><span class="upload-copy"><strong>上传门店问题或经营资料</strong><span>图片、项目单、活动方案等，可不上传</span></span><button class="upload-btn" type="button" id="browse">选择文件</button><input id="files" type="file" accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.csv" multiple hidden></label><div class="file-list" id="file-list"></div></div>
+          <div class="action-row"><button class="primary" id="diagnose" type="submit">查看我的门店情况　→</button><button class="ghost" id="reset" type="button">清空</button></div>
+          <div class="fine">资料仅用于本次诊断参考；诊断建议不构成经营结果承诺。</div>
+        </form>
+      </section>
+      <section class="panel result" aria-live="polite" aria-labelledby="result-title">
+        <div class="result-top"><div class="result-title"><div><h2 id="result-title">门店现状与调整方向</h2><p id="result-subtitle">提交情况后，这里会生成你的专属分析</p></div><span class="badge" id="result-badge" hidden>初步诊断</span></div></div>
+        <div class="result-body">
+          <div class="empty" id="empty"><div class="empty-icon">⌁</div><strong>先描述问题，再看调整方向</strong><p>分析会尝试区分问题出在获客、转化、复购还是门店运营，并给出优先排查与行动建议。</p></div>
+          <div class="results" id="results">
+            <p class="summary" id="summary"></p>
+            <div class="assessment"><div class="assessment-head"><strong>门店经营环节观察</strong><span>基于已提交信息的初步判断</span></div><div class="bars" id="bars"></div></div>
+            <div class="section">现状判断</div><div class="issue-list" id="issues"></div>
+            <div class="section">建议调整方向</div><div class="direction" id="directions"></div>
+            <div class="visual-tool"><strong>把调整方向变成一张门店灵感图</strong><p>根据上面的诊断方向生成示意图。点击后才会调用生图服务，可能产生 API 费用。</p><textarea class="visual-prompt" id="visual-prompt" maxlength="10000" aria-label="图片描述"></textarea><div class="visual-controls"><select class="select" id="visual-ratio" aria-label="图片比例"><option value="4:3">横版 4:3</option><option value="1:1">方图 1:1</option><option value="9:16">竖版 9:16</option><option value="16:9">宽屏 16:9</option></select><button class="ghost" type="button" id="generate-image">生成示意图 ✦</button></div><div class="visual-status" id="visual-status" role="status"></div><img class="generated-image" id="generated-image" alt="根据门店调整方向生成的灵感图" hidden><a class="image-link" id="image-link" target="_blank" rel="noopener noreferrer">在新窗口打开图片 ↗</a></div>
+            <div class="contact"><p>需要结合门店实际经营再细化？可以预约对应方向的一对一沟通。</p><div class="contact-buttons"><button class="ghost" type="button" data-consult="traffic">预约获客流量沟通</button><button class="ghost" type="button" data-consult="operation">预约门店运营沟通</button></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const $ = selector => document.querySelector(selector);
+    const problemButtons = [...document.querySelectorAll('.choice')];
+    const fileInput = $('#files');
+    let selectedFiles = [];
+    let toastTimer;
+
+    function toast(message) {
+      const el = $('#toast');
+      el.textContent = message;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2300);
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    }
+
+    problemButtons.forEach(button => button.addEventListener('click', () => button.classList.toggle('selected')));
+    $('#situation').addEventListener('input', event => { $('#char-count').textContent = event.target.value.length; });
+    $('#browse').addEventListener('click', event => { event.preventDefault(); fileInput.click(); });
+    function showFiles(files) {
+      selectedFiles = [...files].slice(0, 5);
+      $('#file-list').textContent = selectedFiles.length ? `已添加 ${selectedFiles.length} 个文件：${selectedFiles.map(file => file.name).join('、')}` : '';
+    }
+    fileInput.addEventListener('change', () => showFiles(fileInput.files));
+    const dropZone = $('#drop-zone');
+    ['dragenter','dragover'].forEach(name => dropZone.addEventListener(name, event => {event.preventDefault();dropZone.classList.add('drag');}));
+    ['dragleave','drop'].forEach(name => dropZone.addEventListener(name, event => {event.preventDefault();dropZone.classList.remove('drag');}));
+    dropZone.addEventListener('drop', event => showFiles(event.dataTransfer.files));
+
+    const categories = {
+      traffic: {name:'获客流量', score:42, label:'重点排查', detail:'目前描述更接近“新客来源或流量稳定性”问题。先确认有效客源来自哪里，再区分是触达不足、内容吸引力还是到店承接问题。'},
+      conversion: {name:'到店转化', score:48, label:'需要验证', detail:'有咨询但到店或成交偏少时，建议检查从首次回应、预约安排到到店体验的完整链路，找出顾客犹豫的节点。'},
+      repurchase: {name:'复购留存', score:45, label:'重点排查', detail:'老客复购不理想通常要回看服务体验、消费间隔和后续跟进，不建议只靠重复促销解决。'},
+      project: {name:'项目结构', score:50, label:'需要梳理', detail:'项目不好卖时，先看主推项目是否清晰、是否匹配顾客需求，以及体验项目和后续服务能否自然衔接。'},
+      team: {name:'团队运营', score:52, label:'需要梳理', detail:'团队执行不稳定时，建议检查岗位分工、服务标准和日常复盘是否明确，优先找出最影响顾客体验的一环。'},
+      profit: {name:'经营效率', score:47, label:'重点排查', detail:'营业额或利润承压时，需要同时看客源、成交、客单和项目成本，先定位影响最大的变量，再决定调整顺序。'}
+    };
+
+    function analyze() {
+      const selected = problemButtons.filter(button => button.classList.contains('selected'));
+      const selectedKeys = selected.map(button => button.dataset.key);
+      const situation = $('#situation').value.trim();
+      const stage = $('#store-stage').value;
+      const raw = `${selected.map(button => button.textContent).join('、')} ${situation}`;
+      const inferred = [];
+      if (/客流|新客|引流|曝光|流量|没客|客源/.test(raw)) inferred.push('traffic');
+      if (/咨询|预约|到店|成交|转化/.test(raw)) inferred.push('conversion');
+      if (/复购|老客|回头|留存/.test(raw)) inferred.push('repurchase');
+      if (/项目|产品|套餐|定价/.test(raw)) inferred.push('project');
+      if (/员工|团队|执行|管理/.test(raw)) inferred.push('team');
+      if (/利润|营业额|营收|成本/.test(raw)) inferred.push('profit');
+      const keys = [...new Set([...selectedKeys, ...inferred])];
+      const chosen = keys.length ? keys : ['traffic','conversion','repurchase'];
+      const primary = categories[chosen[0]];
+      const summary = stage === '筹备开店中'
+        ? `你目前处于筹备阶段，现阶段更适合先验证客群、项目定位和开店后的获客路径。${situation ? `你补充的情况是：“${situation}”。` : ''}下面先按你关注的方向给出排查顺序。`
+        : `根据你选择的关注项${selected.length ? `「${selected.map(button => button.textContent).join('、')}」` : ''}${situation ? `及问题描述“${situation}”` : ''}，目前优先需要关注「${primary.name}」。这是一份初步判断，建议先用门店现有数据验证，再逐步调整。`;
+      const bars = ['traffic','conversion','repurchase','project','team','profit'].map(key => {
+        const item = categories[key];
+        const active = keys.includes(key);
+        return {key, ...item, score: active ? item.score : 66, label: active ? item.label : '待观察'};
+      });
+      const issues = chosen.slice(0,3).map((key,index) => ({title:`${categories[key].name}：${index === 0 ? '优先检查关键断点' : '同步观察相关环节'}`,text:categories[key].detail}));
+      if (issues.length < 3) issues.push({title:'先建立简单的数据记录',text:'每周记录咨询、预约、到店、成交和复购数量，连续观察两到四周，避免只凭感觉判断变化。'});
+      const directions = [
+        ['第一步','定位问题发生在哪一环','把顾客从看到门店到再次消费的过程拆开，找到流失最明显的节点。'],
+        ['第二步','只选一个动作做验证','围绕优先问题设计一个小调整，保持其他条件相对稳定，观察一到两周。'],
+        ['第三步','根据结果决定下一步','保留有效动作；无改善时回到数据和顾客反馈重新判断，不急着全面换项目或加预算。']
+      ];
+      return {summary,bars,issues,directions,primary,stage,files:selectedFiles.length};
+    }
+
+    function render(data) {
+      $('#empty').hidden = true;
+      $('#results').style.display = 'block';
+      $('#result-badge').hidden = false;
+      $('#result-subtitle').textContent = `${data.stage} · 经营情况初步分析`;
+      $('#summary').textContent = data.summary;
+      $('#bars').innerHTML = data.bars.map(item => `<div class="bar-row"><span>${item.name}</span><div class="track"><i style="width:${item.score}%"></i></div><b>${item.label}</b></div>`).join('');
+      $('#issues').innerHTML = data.issues.map((item,index) => `<div class="issue"><span class="num">${index+1}</span><div><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.text)}</span></div></div>`).join('');
+      $('#directions').innerHTML = data.directions.map(([week,title,detail]) => `<div class="direction-row"><span class="week">${week}</span><div><strong>${title}</strong><span>${detail}</span></div></div>`).join('');
+      $('#visual-prompt').value = data.primary.category === 'traffic'
+        ? `为汉本养健康养生门店创作一张获客方向的经营灵感示意图。重点表现：${data.primary.name}；门店空间自然舒适、顾客体验真实亲切、现代中式草本美学、自然光、专业商业摄影。画面不要出现文字、Logo、水印，不暗示医疗疗效。`
+        : `为汉本养健康养生门店创作一张门店运营调整方向的经营灵感示意图。重点表现：${data.primary.name}；有序专业的服务流程、顾客与顾问自然交流、整洁舒适的门店空间、现代中式草本美学、真实商业摄影。画面不要出现文字、Logo、水印，不暗示医疗疗效。`;
+      $('#visual-status').textContent = '';
+      $('#generated-image').hidden = true;
+      $('#image-link').style.display = 'none';
+      if (window.matchMedia('(max-width:780px)').matches) $('.result').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    $('#store-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!$('#situation').value.trim() && !problemButtons.some(button => button.classList.contains('selected')) && !selectedFiles.length) {
+        toast('请至少选择一个困扰，或简单描述门店情况');
+        $('#situation').focus();
+        return;
+      }
+      const submit = $('#diagnose');
+      submit.disabled = true;
+      submit.innerHTML = '<span class="spinner"></span> 正在梳理门店情况…';
+      setTimeout(() => {
+        render(analyze());
+        submit.disabled = false;
+        submit.textContent = '重新分析　→';
+      }, 450);
+    });
+
+    $('#reset').addEventListener('click', () => {
+      $('#store-form').reset();
+      problemButtons.forEach(button => button.classList.remove('selected'));
+      selectedFiles = [];
+      $('#file-list').textContent = '';
+      $('#char-count').textContent = '0';
+      $('#results').style.display = 'none';
+      $('#empty').hidden = false;
+      $('#result-badge').hidden = true;
+      $('#result-subtitle').textContent = '提交情况后，这里会生成你的专属分析';
+      $('#diagnose').textContent = '查看我的门店情况　→';
+      toast('已清空，可以重新填写');
+    });
+
+    $('#generate-image').addEventListener('click', async () => {
+      const button = $('#generate-image');
+      const status = $('#visual-status');
+      const prompt = $('#visual-prompt').value.trim();
+      if (!prompt) { status.textContent = '请先填写图片描述。'; return; }
+      if (location.hostname.endsWith('.github.io')) {
+        status.textContent = '当前为静态展示站点，生图功能需要另外连接后端服务。';
+        return;
+      }
+      button.disabled = true;
+      button.innerHTML = '<span class="spinner"></span> 正在生成…';
+      status.textContent = '请求已提交，通常需要几十秒。';
+      $('#generated-image').hidden = true;
+      $('#image-link').style.display = 'none';
+      try {
+        const response = await fetch('/api/generate-image', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({prompt, aspect_ratio: $('#visual-ratio').value})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || '图片生成失败，请稍后重试。');
+        $('#generated-image').src = data.image;
+        $('#generated-image').hidden = false;
+        $('#image-link').href = data.image;
+        $('#image-link').style.display = 'inline-block';
+        status.textContent = '图片已生成。';
+      } catch (error) {
+        status.textContent = error.message === 'Failed to fetch' ? '请通过本地服务地址打开页面，不能直接用 file:// 调用生图。' : error.message;
+      } finally {
+        button.disabled = false;
+        button.textContent = '再生成一张 ✦';
+      }
+    });
+
+    document.querySelectorAll('[data-consult]').forEach(button => button.addEventListener('click', () => {
+      toast(button.dataset.consult === 'traffic' ? '已选择获客流量方向，预约入口可在正式版接入' : '已选择门店运营方向，预约入口可在正式版接入');
+    }));
+  </script>
+</body>
+</html>
